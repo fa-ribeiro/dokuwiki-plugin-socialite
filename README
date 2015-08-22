@@ -1,13 +1,13 @@
-# lsb Plugin for DokuWiki
+lsb Plugin for DokuWiki
 
-Lightweight social buttons plugin for dokuwiki
+Lightweight social buttons
 
 All documentation for this plugin can be found at
-http://www.dokuwiki.org/plugin:lsb
+https://servidordebian.org
 
 If you install this plugin manually, make sure it is installed in
-lib/plugins/lsb/ - if the folder is called different it will not
-work!
+lib/plugins/lsb/ - if the folder is called different it
+will not work!
 
 Please refer to http://www.dokuwiki.org/plugins for additional info
 on how to install plugins in DokuWiki.
