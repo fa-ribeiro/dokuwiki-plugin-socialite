@@ -121,25 +121,25 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
 
         switch ($network) {
             case 'twitter':
-                $xhtml .= '<a href="https://twitter.com/intent/tweet?text=' . $title . '&url='. $url .'&via=TWITTER-HANDLE">Tweet</a>';
+                $xhtml .= '<a class="lsb-link ico-twitter" href="https://twitter.com/intent/tweet?text=' . $title . '&url='. $url .'&via=TWITTER-HANDLE" alt="Tweet on Twitter">Twitter</a>';
                 break;
             case 'facebook':
-                $xhtml .= '<a href="http://www.facebook.com/sharer.php?u='. $url .'">Share on Facebook</a>';
+                $xhtml .= '<a class="lsb-link ico-facebook" href="http://www.facebook.com/sharer.php?u='. $url .'" alt="Share on Facebook">Facebook</a>';
                 break;
             case 'google+':
-                $xhtml .= '<a href="https://plus.facebook.com/share?url='. $url .'">Plus on Google+</a>';
+                $xhtml .= '<a class="lsb-link ico-google" href="https://plus.google.com/share?url='. $url .'" alt="Plus on Google+">Google+</a>';
                 break;
             case 'linkedin':
-                $xhtml .= '<a href="https://www.linkedin.com/shareArticle?mini=true&url='. $url .'&title=' . $title . '&summary=' . $abstract . '&source=YOUR-URL">Share on LinkedIn</a>';
+                $xhtml .= '<a class="lsb-link ico-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url='. $url .'&title=' . $title . '&summary=' . $abstract . '&source=YOUR-URL" alt="Share on LinkedIn">LinkedIn</a>';
                 break;
             case 'pinterest':
-                $xhtml .= '<a href="https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract . '&media=YOUR-IMAGE-SRC">Pin on Pinterest</a>';
+                $xhtml .= '<a class="lsb-link ico-pinterest" href="https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract . '&media=YOUR-IMAGE-SRC" alt="Pin on Pinterest">Pinterest</a>';
                 break;
             case 'tumblr':
-                $xhtml .= '<a href="http://www.tumblr.com/share/link?url='. $url .'&description=' . $abstract . '">Share on Tumblr</a>';
+                $xhtml .= '<a class="lsb-link ico-tumblr" href="http://www.tumblr.com/share/link?url='. $url .'&description=' . $abstract . '" alt="Share on Tumblr">Tumblr</a>';
                 break;
             case 'reddit':
-                $xhtml .= '<a href="http://www.reddit.com/submit?url='. $url .'&title=' . $title . '">Share on Reddit</a>';
+                $xhtml .= '<a class="lsb-link ico-reddit" href="http://www.reddit.com/submit?url='. $url .'&title=' . $title . '" alt="Share on Reddit">Reddit</a>';
                 break;
         }
 
