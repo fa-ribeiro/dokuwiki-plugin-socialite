@@ -9,6 +9,6 @@
 // $lang['fixme'] = 'FIXME';
 
 $lang['networks']   = 'List of your favorite social buttons, space separated and in order of appearance.';
-$lang['networks']  .= ' Valid names are: twitter facebook google+ linkedin pinterest tumblr reddit';
+$lang['networks']  .= ' Valid names are: twitter facebook googleplus linkedin pinterest tumblr reddit';
 
-$lang['display']    = 'Display options: share on network, the name of network or just the icon';
+$lang['display']    = 'Display options: show a "share on network" text or just the icon';

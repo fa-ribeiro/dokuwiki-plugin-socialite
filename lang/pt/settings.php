@@ -1,6 +1,6 @@
 <?php
 /**
- * english language file for lsb plugin
+ * Portuguese language file for lsb plugin
  *
  * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
  */

@@ -36,12 +36,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
      */
     public function connectTo($mode) {
         $this->Lexer->addSpecialPattern('~~LSB\b.*?~~',$mode,'plugin_lsb_button');
-//        $this->Lexer->addEntryPattern('<FIXME>',$mode,'plugin_lsb_button');
     }
-
-//    public function postConnect() {
-//        $this->Lexer->addExitPattern('</FIXME>','plugin_lsb_button');
-//    }
 
     /**
      * Handle matches of the lsb syntax
@@ -77,7 +72,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         $renderer->doc .= '<ul class="lsb">';
 
         // validation list of available social networks
-        $protected = array('twitter', 'facebook', 'google+', 'linkedin', 'pinterest', 'tumblr', 'reddit');
+        $protected = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit');
 
 
         foreach ($data as $network) {
@@ -91,10 +86,10 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
     }
 
     /**
-     * Render xhtml output for facebook share button
+     * Render xhtml output for share buttons
      *
-     * @param string $network The social network to render the button to
-     * @return string Xhtml code for button.
+     * @param string    $network    The social network to render the button to
+     * @return string   Xhtml code for button.
      */
     protected function lsb_button ($network) {
         global $ID;
@@ -109,29 +104,29 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         // see: https://github.com/cferdinandi/social-sharing
         // <a href="https://twitter.com/intent/tweet?text=YOUR-TITLE&url=YOUR-URL&via=TWITTER-HANDLE">Tweet</a>
         // <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR-URL">Share on Facebook</a>
-        // <a href="https://plus.google.com/share?url=YOUR-URL">Plus on Google+</a>
+        // <a href="https://plus.google.com/share?url=YOUR-URL">Plus on googleplus</a>
         // <a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR-URL&title=YOUR-TITLE&summary=YOUR-SUMMARY&source=YOUR-URL">Share on LinkedIn</a>
         // <a href="https://pinterest.com/pin/create/button/?url=YOUR-URL&description=YOUR-DESCRIPTION&media=YOUR-IMAGE-SRC">Pin on Pinterest</a>
         // <a href="https://vk.com/share.php?url=YOUR-URL&title=YOUR-TITLE&description=YOUR-DESCRIPTION&image=YOUR-IMAGE-SRC&noparse=true">Share on VK</a>
         // <a href="https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url=YOUR-URL">Share on Xing</a>
         // <a href="http://www.tumblr.com/share/link?url=YOUR-URL&description=YOUR-DESCRIPTION">Share on Tumblr</a>
         // <a href="http://www.reddit.com/submit?url=YOUR_URL&title=YOUR_TITLE">Share on Reddit</a>
- 
+
         switch ($network) {
             case 'twitter':
-                $href = 'https://twitter.com/intent/tweet?url=' . $url . '&text='. $title .'&via=TWITTER-HANDLE';
+                $href = 'https://twitter.com/intent/tweet?url=' . $url . '&text='. $title;
                 break;
             case 'facebook':
                 $href = 'http://www.facebook.com/sharer.php?u='. $url;
                 break;
-            case 'google+':
+            case 'googleplus':
                 $href = 'https://plus.google.com/share?url='. $url;
                 break;
             case 'linkedin':
-                $href = 'href="https://www.linkedin.com/shareArticle?url='. $url .'&title=' . $title . '&summary=' . $abstract . '&mini=true&source=' . $url;
+                $href = 'https://www.linkedin.com/shareArticle?url='. $url .'&title=' . $title . '&summary=' . $abstract . '&mini=true&source=' . $url;
                 break;
             case 'pinterest':
-                $href = 'https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract . '&media=YOUR-IMAGE-SRC';
+                $href = 'https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract;
                 break;
             case 'tumblr':
                 $href = 'http://www.tumblr.com/share/link?url='. $url .'&description=' . $abstract;
@@ -148,15 +143,20 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         return $xhtml;
     }
 
-
+    /**
+     * Returns the thext to display in share button
+     *
+     * @param string    $network    The social network to get the text to
+     * @return string   text for button or empty string to show just the icon.
+     */
     protected function lsb_getText($network) {
 
         $display = $this->getConf('display');
-        if ($display == 'name') {
-            return $network;
-        } elseif ($display == 'text') {
-            return $this->getLang($network.'_text');
+
+        if ($display == 'text') {
+            return $this->getLang($network . '_text');
         } else {
+            // no text, just the icon
             return '';
         }
     }
