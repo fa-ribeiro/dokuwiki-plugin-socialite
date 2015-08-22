@@ -53,14 +53,13 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
      * @return array Data for the renderer
      */
     public function handle($match, $state, $pos, Doku_Handler &$handler){
-        $match = trim(substr($match, 5, -2)); // strip markup
+        $match = strtolower(trim(substr($match, 5, -2))); // strip markup
 
-        if (!empty($match)) {
-            $data = explode(' ', $match);
-        } else {
-            $data = array('twitter', 'facebook', 'google+', 'linkedin', 'pinterest', 'tumblr', 'reddit');
+        if (empty($match)) {
+            $match = strtolower(trim($this->getConf('networks')));
         }
-        return $data;
+
+        return explode(' ', $match);
     }
 
     /**
@@ -75,7 +74,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
 
         if($mode != 'xhtml') return false;
 
-        // valid list of available social networks
+        // validation list of available social networks
         $protected = array('twitter', 'facebook', 'google+', 'linkedin', 'pinterest', 'tumblr', 'reddit');
 
         $renderer->doc .= '<ul class="lsb">';
@@ -121,25 +120,25 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
 
         switch ($network) {
             case 'twitter':
-                $xhtml .= '<a class="lsb-link ico-twitter" href="https://twitter.com/intent/tweet?text=' . $title . '&url='. $url .'&via=TWITTER-HANDLE" alt="Tweet on Twitter">Twitter</a>';
+                $xhtml .= '<a class="lsb-link ico-twitter" href="https://twitter.com/intent/tweet?url=' . $url . '&text='. $title .'&via=TWITTER-HANDLE">' . $this->getLang('twitter_title') . '</a>';
                 break;
             case 'facebook':
-                $xhtml .= '<a class="lsb-link ico-facebook" href="http://www.facebook.com/sharer.php?u='. $url .'" alt="Share on Facebook">Facebook</a>';
+                $xhtml .= '<a class="lsb-link ico-facebook" href="http://www.facebook.com/sharer.php?u='. $url .'">' . $this->getLang('facebook_title') . '</a>';
                 break;
             case 'google+':
-                $xhtml .= '<a class="lsb-link ico-google" href="https://plus.google.com/share?url='. $url .'" alt="Plus on Google+">Google+</a>';
+                $xhtml .= '<a class="lsb-link ico-google" href="https://plus.google.com/share?url='. $url .'">' . $this->getLang('google+_title') . '</a>';
                 break;
             case 'linkedin':
-                $xhtml .= '<a class="lsb-link ico-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url='. $url .'&title=' . $title . '&summary=' . $abstract . '&source=YOUR-URL" alt="Share on LinkedIn">LinkedIn</a>';
+                $xhtml .= '<a class="lsb-link ico-linkedin" href="https://www.linkedin.com/shareArticle?url='. $url .'&title=' . $title . '&summary=' . $abstract . '&mini=true&source=YOUR-URL">' . $this->getLang('linkedin_title') . '</a>';
                 break;
             case 'pinterest':
-                $xhtml .= '<a class="lsb-link ico-pinterest" href="https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract . '&media=YOUR-IMAGE-SRC" alt="Pin on Pinterest">Pinterest</a>';
+                $xhtml .= '<a class="lsb-link ico-pinterest" href="https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract . '&media=YOUR-IMAGE-SRC">' . $this->getLang('pinterest_title') . '</a>';
                 break;
             case 'tumblr':
-                $xhtml .= '<a class="lsb-link ico-tumblr" href="http://www.tumblr.com/share/link?url='. $url .'&description=' . $abstract . '" alt="Share on Tumblr">Tumblr</a>';
+                $xhtml .= '<a class="lsb-link ico-tumblr" href="http://www.tumblr.com/share/link?url='. $url .'&description=' . $abstract . '">' . $this->getLang('tumblr_title') . '</a>';
                 break;
             case 'reddit':
-                $xhtml .= '<a class="lsb-link ico-reddit" href="http://www.reddit.com/submit?url='. $url .'&title=' . $title . '" alt="Share on Reddit">Reddit</a>';
+                $xhtml .= '<a class="lsb-link ico-reddit" href="http://www.reddit.com/submit?url='. $url .'&title=' . $title . '">' . $this->getLang('reddit_title') . '</a>';
                 break;
         }
 
