@@ -11,10 +11,10 @@
 // custom language strings for the plugin
 // $lang['fixme'] = 'FIXME';
 
-$lang['twitter_text']    = 'Tweet this';
-$lang['facebook_text']   = 'Share on Facebook';
-$lang['googleplus_text'] = 'Plus on Google+';
-$lang['linkedin_text']   = 'Share on LinkedIn';
-$lang['pinterest_text']  = 'Pin on Pinterest';
-$lang['tumblr_text']     = 'Share on Tumblr';
-$lang['reddit_text']     = 'Share on Reddit';
+$lang['twitter_text']    = 'Twitter';
+$lang['facebook_text']   = 'Facebook';
+$lang['googleplus_text'] = 'Google+';
+$lang['linkedin_text']   = 'LinkedIn';
+$lang['pinterest_text']  = 'Pinterest';
+$lang['tumblr_text']     = 'Tumblr';
+$lang['reddit_text']     = 'Reddit';

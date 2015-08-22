@@ -11,4 +11,4 @@
 $lang['networks']   = 'List of your favorite social buttons, space separated and in order of appearance.';
 $lang['networks']  .= ' Valid names are: twitter facebook googleplus linkedin pinterest tumblr reddit';
 
-$lang['display']    = 'Display options: show a "share on network" text or just the icon';
+$lang['display']    = 'Display options: show text or just the icon.';

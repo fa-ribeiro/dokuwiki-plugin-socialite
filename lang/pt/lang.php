@@ -11,10 +11,10 @@
 // custom language strings for the plugin
 // $lang['fixme'] = 'FIXME';
 
-$lang['twitter_text']    = 'Tweetar isto';
-$lang['facebook_text']   = 'Partilhar no Facebook';
-$lang['googleplus_text'] = 'Mais on Google+';
-$lang['linkedin_text']   = 'Partilhar no LinkedIn';
-$lang['pinterest_text']  = 'Pin no Pinterest';
-$lang['tumblr_text']     = 'Partilhar no Tumblr';
-$lang['reddit_text']     = 'Partilhar no Reddit';
+$lang['twitter_text']    = 'Twitter';
+$lang['facebook_text']   = 'Facebook';
+$lang['googleplus_text'] = 'Google+';
+$lang['linkedin_text']   = 'LinkedIn';
+$lang['pinterest_text']  = 'Pinterest';
+$lang['tumblr_text']     = 'Tumblr';
+$lang['reddit_text']     = 'Reddit';
