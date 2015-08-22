@@ -101,10 +101,8 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         global $INFO;
 
         $url      = rawurlencode(wl($ID,'',true));
-        $title    = rawurlencode(($INFO['meta']['title']) ? $INFO['meta']['title'] : $meta);
-        $abstract = rawurlencode($INFO['meta']['description']['abstract']);
-        $text     = $this->lsb_getText($network);
-        $class    = 'ico-' . $network;
+        $title    = hsc(($INFO['meta']['title']) ? $INFO['meta']['title'] : $meta);
+        $abstract = hsc($INFO['meta']['description']['abstract']);
 
         // see: https://github.com/cferdinandi/social-sharing
         // <a href="https://twitter.com/intent/tweet?text=YOUR-TITLE&url=YOUR-URL&via=TWITTER-HANDLE">Tweet</a>
@@ -116,49 +114,37 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         // <a href="https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url=YOUR-URL">Share on Xing</a>
         // <a href="http://www.tumblr.com/share/link?url=YOUR-URL&description=YOUR-DESCRIPTION">Share on Tumblr</a>
         // <a href="http://www.reddit.com/submit?url=YOUR_URL&title=YOUR_TITLE">Share on Reddit</a>
- 
+
+        $xhtml = '<li class="lsb-item">';
+
         switch ($network) {
             case 'twitter':
-                $href = 'https://twitter.com/intent/tweet?url=' . $url . '&text='. $title .'&via=TWITTER-HANDLE';
+                $xhtml .= '<a class="lsb-link ico-twitter" href="https://twitter.com/intent/tweet?url=' . $url . '&text='. $title .'&via=TWITTER-HANDLE">' . $this->getLang('twitter_name') . '</a>';
                 break;
             case 'facebook':
-                $href = 'http://www.facebook.com/sharer.php?u='. $url;
+                $xhtml .= '<a class="lsb-link ico-facebook" href="http://www.facebook.com/sharer.php?u='. $url .'">' . $this->getLang('facebook_name') . '</a>';
                 break;
             case 'google+':
-                $href = 'https://plus.google.com/share?url='. $url;
+                $xhtml .= '<a class="lsb-link ico-google" href="https://plus.google.com/share?url='. $url .'">' . $this->getLang('google+_name') . '</a>';
                 break;
             case 'linkedin':
-                $href = 'href="https://www.linkedin.com/shareArticle?url='. $url .'&title=' . $title . '&summary=' . $abstract . '&mini=true&source=' . $url;
+                $xhtml .= '<a class="lsb-link ico-linkedin" href="https://www.linkedin.com/shareArticle?url='. $url .'&title=' . $title . '&summary=' . $abstract . '&mini=true&source=YOUR-URL">' . $this->getLang('linkedin_name') . '</a>';
                 break;
             case 'pinterest':
-                $href = 'https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract . '&media=YOUR-IMAGE-SRC';
+                $xhtml .= '<a class="lsb-link ico-pinterest" href="https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract . '&media=YOUR-IMAGE-SRC">' . $this->getLang('pinterest_name') . '</a>';
                 break;
             case 'tumblr':
-                $href = 'http://www.tumblr.com/share/link?url='. $url .'&description=' . $abstract;
+                $xhtml .= '<a class="lsb-link ico-tumblr" href="http://www.tumblr.com/share/link?url='. $url .'&description=' . $abstract . '">' . $this->getLang('tumblr_name') . '</a>';
                 break;
             case 'reddit':
-                $href = 'http://www.reddit.com/submit?url='. $url .'&title=' . $title;
+                $xhtml .= '<a class="lsb-link ico-reddit" href="http://www.reddit.com/submit?url='. $url .'&title=' . $title . '">' . $this->getLang('reddit_name') . '</a>';
                 break;
         }
 
-        $xhtml  = '<li class="lsb-item">';
-        $xhtml .= '<a class="lsb-link ' . $class . '" href="' . $href . '">' . $text . '</a>';
         $xhtml .= '</li>';
 
         return $xhtml;
     }
 
-
-    protected function lsb_getText($network) {
-
-        $display = $this->getConf('display');
-        if ($display == 'name') {
-            return $network;
-        } elseif ($display == 'text') {
-            return $this->getLang($network.'_text');
-        } else {
-            return '';
-        }
-    }
 
 }

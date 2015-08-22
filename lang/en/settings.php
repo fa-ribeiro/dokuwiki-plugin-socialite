@@ -8,6 +8,7 @@
 // keys need to match the config setting name
 // $lang['fixme'] = 'FIXME';
 
+$lang['networks']   = 'List of your favorite social buttons, space separated and in order of appearance.';
+$lang['networks']  .= ' Valid names are: twitter facebook google+ linkedin pinterest tumblr reddit';
 
-
-//Setup VIM: ex: et ts=4 :
+$lang['display']    = 'Display options: share on network, the name of network or just the icon';
