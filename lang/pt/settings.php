@@ -9,6 +9,6 @@
 // $lang['fixme'] = 'FIXME';
 
 $lang['networks']   = 'A lista dos teus botões sociais favoritos, ordenados e separados por espaços.';
-$lang['networks']  .= ' Os nomes válidos são: twitter facebook google+ linkedin pinterest tumblr reddit';
+$lang['networks']  .= ' Os nomes válidos são: twitter facebook google+ linkedin pinterest tumblr reddit taringa';
 
 $lang['display']    = 'Opções de exibição: mostra texto ou apenas o ícone.';

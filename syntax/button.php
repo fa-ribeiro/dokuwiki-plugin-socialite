@@ -70,7 +70,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         if($mode != 'xhtml') return false;
 
         // validation list of available social networks
-        $protected = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit');
+        $protected = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit', 'taringa');
 
 
         $renderer->doc .= '<ul class="lsb">';
@@ -111,6 +111,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         // <a href="https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url=YOUR-URL">Share on Xing</a>
         // <a href="http://www.tumblr.com/share/link?url=YOUR-URL&description=YOUR-DESCRIPTION">Share on Tumblr</a>
         // <a href="http://www.reddit.com/submit?url=YOUR_URL&title=YOUR_TITLE">Share on Reddit</a>
+        // <a href="http://www.taringa.net/widgets/share.php?url=YOUR_URL&body=YOUR-DESCRIPTION">Compartir en Taringa</a>
 
         switch ($network) {
             case 'twitter':
@@ -140,6 +141,10 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
             case 'reddit':
                 $name = 'Reddit';
                 $href = 'http://www.reddit.com/submit?url='. $url .'&title=' . $title;
+                break;
+            case 'taringa':
+                $name = 'Taringa';
+                $href = 'http://www.taringa.net/widgets/share.php?url='. $url .'&body=' . $abstract;
                 break;
         }
 

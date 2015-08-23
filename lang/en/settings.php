@@ -9,6 +9,6 @@
 // $lang['fixme'] = 'FIXME';
 
 $lang['networks']   = 'List of your favorite social buttons, space separated and in order of appearance.';
-$lang['networks']  .= ' Valid names are: twitter facebook googleplus linkedin pinterest tumblr reddit';
+$lang['networks']  .= ' Valid names are: twitter facebook googleplus linkedin pinterest tumblr reddit taringa';
 
 $lang['display']    = 'Display options: show social buttons with icon and name, just the icon or name and backgroud color.';

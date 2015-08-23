@@ -67,7 +67,7 @@
 }
 
 
-/* 
+/*
  * Social network specific settings
  */
 
@@ -139,8 +139,8 @@ a .lsb-link-color-facebook:hover {
     background-color: #d64937;
 }
 
-.lsb-link-color-google:hover,
-a .lsb-link-color-google:hover {
+.lsb-link-color-googleplus:hover,
+a .lsb-link-color-googleplus:hover {
     background-color: #a02f21;
     border-color: #a02f21;
 }
@@ -246,10 +246,30 @@ a .lsb-link-color-reddit:hover {
     border-color: #b33d00;
 }
 
+/* Taringa */
+.lsb-item-name-taringa {
+    background-image: url("images/taringa.ico");
+}
 
+.lsb-link-icon-taringa{
+    content:url("images/taringa.ico");
+}
 
+.lsb-link-name-taringa,
+.lsb-link-icon-taringa,
+.lsb-link-color-taringa {
+    border-color: #005dab;
+}
 
+.lsb-link-color-taringa {
+    background-color: #005dab;
+}
 
+.lsb-link-color-taringa:hover,
+a .lsb-link-color-taringa:hover {
+    background-color: #004178;
+    border-color: #004178;
+}
 
 
 
@@ -285,16 +305,3 @@ a .lsb-link-color-xing:hover {
   background-color: #082222;
   border-color: #082222;
 }
-
-.lsb-link-color-tumblr {
-  background-color: #35465c;
-  border-color: #35465c;
-}
-
-.lsb-link-color-tumblr:hover,
-a .lsb-link-color-tumblr:hover {
-  background-color: #19212b;
-  border-color: #19212b;
-}
-
-

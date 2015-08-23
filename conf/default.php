@@ -8,6 +8,6 @@
 //$conf['fixme']    = 'FIXME';
 
 
-$conf['networks']   = 'twitter facebook googleplus linkedin pinterest tumblr reddit';
+$conf['networks']   = 'twitter facebook googleplus linkedin pinterest tumblr reddit taringa';
 
 $conf['display']    = 'color';
