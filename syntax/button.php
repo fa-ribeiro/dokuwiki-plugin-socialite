@@ -35,7 +35,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
      * @param string $mode Parser mode
      */
     public function connectTo($mode) {
-        $this->Lexer->addSpecialPattern('~~(lsb|LSB)\b.*?~~',$mode,'plugin_lsb_button');
+        $this->Lexer->addSpecialPattern('~~LSB\b.*?~~',$mode,'plugin_lsb_button');
     }
 
     /**
