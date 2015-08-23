@@ -69,12 +69,11 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
 
         if($mode != 'xhtml') return false;
 
-        $renderer->doc .= '<ul class="lsb">';
-
         // validation list of available social networks
         $protected = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit');
 
 
+        $renderer->doc .= '<ul class="lsb">';
         foreach ($data as $network) {
             if (in_array($network, $protected)) {
                 $renderer->doc .= $this->lsb_button($network);
@@ -98,9 +97,10 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         $url      = rawurlencode(wl($ID,'',true));
         $title    = rawurlencode(($INFO['meta']['title']) ? $INFO['meta']['title'] : $meta);
         $abstract = rawurlencode($INFO['meta']['description']['abstract']);
-        $text     = $this->lsb_getText($network);
-        $class    = 'ico-' . $network;
+        //$text     = $this->lsb_getText($network);
+        $class    = $this->getConf('display') . '-' . $network;
 
+        // see: http://builtbyboon.com/blog/simple-social-sharing-buttons
         // see: https://github.com/cferdinandi/social-sharing
         // <a href="https://twitter.com/intent/tweet?text=YOUR-TITLE&url=YOUR-URL&via=TWITTER-HANDLE">Tweet</a>
         // <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR-URL">Share on Facebook</a>
@@ -114,30 +114,37 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
 
         switch ($network) {
             case 'twitter':
+                $name = 'Twitter';
                 $href = 'https://twitter.com/intent/tweet?url=' . $url . '&text='. $title;
                 break;
             case 'facebook':
+                $name = 'Facebook';
                 $href = 'http://www.facebook.com/sharer.php?u='. $url;
                 break;
             case 'googleplus':
+                $name = 'Google+';
                 $href = 'https://plus.google.com/share?url='. $url;
                 break;
             case 'linkedin':
+                $name = 'LinkedIn';
                 $href = 'https://www.linkedin.com/shareArticle?url='. $url .'&title=' . $title . '&summary=' . $abstract . '&mini=true&source=' . $url;
                 break;
             case 'pinterest':
+                $name = 'Pinterest';
                 $href = 'https://pinterest.com/pin/create/button/?url='. $url .'&description=' . $abstract;
                 break;
             case 'tumblr':
+                $name = 'Tumblr';
                 $href = 'http://www.tumblr.com/share/link?url='. $url .'&description=' . $abstract;
                 break;
             case 'reddit':
+                $name = 'Reddit';
                 $href = 'http://www.reddit.com/submit?url='. $url .'&title=' . $title;
                 break;
         }
 
-        $xhtml  = '<li class="lsb-item">';
-        $xhtml .= '<a class="lsb-link ' . $class . '" href="' . $href . '">' . $text . '</a>';
+        $xhtml  = '<li class="lsb-item-' . $class . '">';
+        $xhtml .= '<a class="lsb-link-' . $class . '" href="' . $href . '">' . $name . '</a>';
         $xhtml .= '</li>';
 
         return $xhtml;
@@ -149,16 +156,16 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
      * @param string    $network    The social network to get the text to
      * @return string   text for button or empty string to show just the icon.
      */
-    protected function lsb_getText($network) {
+    // protected function lsb_getText($network) {
 
-        $display = $this->getConf('display');
+    //     $display = $this->getConf('display');
 
-        if ($display == 'text') {
-            return $this->getLang($network . '_text');
-        } else {
-            // no text, just the icon
-            return '';
-        }
-    }
+    //     if ($display == 'text') {
+    //         return $this->getLang($network . '_text');
+    //     } else {
+    //         // no text, just the icon
+    //         return '';
+    //     }
+    // }
 
 }

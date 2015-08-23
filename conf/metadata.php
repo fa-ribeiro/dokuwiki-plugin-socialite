@@ -10,4 +10,4 @@
 
 $meta['networks']   = array('string', '_pattern' => '/^[a-zA-Z\s]*$/');
 
-$meta['display']    = array('multichoice','_choices' => array('text', 'icon'));
+$meta['display']    = array('multichoice','_choices' => array('name', 'icon', 'color'));

@@ -1,63 +1,300 @@
 /* -- Begin social sharing buttons
 ------------------------------------------------------------- */
+
 .lsb {
     padding-left: 0;
     list-style: none;
 }
 
-.lsb-item {
+
+[class*="lsb-link-"] {
+    font-size: .875em;
+    border-radius: 2px;
+    border: 1px solid;
+    box-shadow: 0 0 .5em #999;
+    transition: background-color ease-in-out .5s, color ease-in-out .5s, border-color ease-in-out .5s, box-shadow ease-in-out .5s;
+    width: 16px;
+    height: 16px;
+}
+
+[class*="lsb-link-"]:hover {
+    box-shadow: 0 0 1em #666;
+}
+
+[class*="lsb-link-name-"] {
+    padding: .25em .25em .25em 1.75em;
+}
+
+[class*="lsb-link-icon-"],
+[class*="lsb-link-color-"] {
+    padding: .25em .25em .25em .25em;
+}
+
+[class*="lsb-link-color-"],
+[class*="lsb-link-color-"]:hover {
+      color: #ffffff;
+}
+
+
+[class*="lsb-item-name-"],
+[class*="lsb-item-icon-"] {
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+[class*="lsb-item-"] {
     display: inline-block;
     margin: .25em;
     line-height: 24px;
 }
 
-.lsb-link {
-    font-size: .75em;
-    padding: .5em .5em .5em 2.25em;
-    background-color: #f5f5f5;
-    border-radius: 2px;
-    box-shadow: 0 0 .5em #999;
-    transition: background-color ease-in-out .5s, color ease-in-out .5s, border-color ease-in-out .5s;
+[class*="lsb-item-"] a:link,
+[class*="lsb-item-"] a:visited {
+    text-decoration: none;
 }
 
-.lsb-link:hover, .lsb-link:active, .lsb-link:focus {
-    color: #000;
-    background-color: #e5e5e5;
+[class*="lsb-item-name-"] a:link,
+[class*="lsb-item-name-"] a:visited,
+[class*="lsb-item-icon-"] a:link,
+[class*="lsb-item-icon-"] a:visited {
+    color: #000000;
 }
 
-[class*="ico-"] {
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: 6px center;
+[class*="lsb-item-color-"] a:link,
+[class*="lsb-item-color-"] a:visited {
+    color: #ffffff;
 }
 
-.ico-twitter {
-    background-image: url("http://twitter.com/favicons/favicon.ico");
+
+/* 
+ * Social network specific settings
+ */
+
+/* Twitter */
+.lsb-item-name-twitter {
+    background-image: url("images/twitter.ico");
+}
+.lsb-link-icon-twitter{
+    content:url("images/twitter.ico");
 }
 
-.ico-facebook {
-    background-image: url("http://www.facebook.com/favicon.ico");
+.lsb-link-name-twitter,
+.lsb-link-icon-twitter,
+.lsb-link-color-twitter {
+    border-color: #41b7d8;
 }
 
-.ico-googleplus {
-    background-image: url("https://ssl.gstatic.com/s2/oz/images/faviconr2.ico");
+.lsb-link-color-twitter {
+    background-color: #41b7d8;
 }
 
-.ico-linkedin {
-    background-image: url("https://www.linkedin.com/favicon.ico");
+.lsb-link-color-twitter:hover,
+a .lsb-link-color-twitter:hover {
+    background-color: #238caa;
+    border-color: #238caa;
 }
 
-.ico-pinterest {
-    background-image: url("https://www.pinterest.com/favicon.ico");
+/* Facebook */
+.lsb-item-name-facebook {
+    background-image: url("images/facebook.ico");
 }
 
-.ico-tumblr {
-    background-image: url("https://www.tumblr.com/favicon.ico");
+.lsb-link-icon-facebook{
+    content:url("images/facebook.ico");
 }
 
-.ico-reddit {
-    background-image: url("https://www.reddit.com/favicon.ico");
+.lsb-link-name-facebook,
+.lsb-link-icon-facebook,
+.lsb-link-color-facebook {
+    border-color: #3b5997;
 }
 
+.lsb-link-color-facebook {
+    background-color: #3b5997;
+}
+
+.lsb-link-color-facebook:hover,
+a .lsb-link-color-facebook:hover {
+    background-color: #263960;
+    border-color: #263960;
+}
+
+/* Google+ */
+.lsb-item-name-googleplus {
+    background-image: url("images/googleplus.ico");
+}
+
+.lsb-link-icon-googleplus{
+    content:url("images/googleplus.ico");
+}
+
+.lsb-link-name-googleplus,
+.lsb-link-icon-googleplus,
+.lsb-link-color-googleplus {
+    border-color: #d64937;
+}
+
+.lsb-link-color-googleplus {
+    background-color: #d64937;
+}
+
+.lsb-link-color-google:hover,
+a .lsb-link-color-google:hover {
+    background-color: #a02f21;
+    border-color: #a02f21;
+}
+
+/* LinkedIn */
+.lsb-item-name-linkedin {
+    background-image: url("images/linkedin.ico");
+}
+
+.lsb-link-icon-linkedin{
+    content:url("images/linkedin.ico");
+}
+
+.lsb-link-name-linkedin,
+.lsb-link-icon-linkedin,
+.lsb-link-color-linkedin {
+    border-color: #0073b2;
+}
+
+.lsb-link-color-linkedin {
+    background-color: #0073b2;
+
+}
+
+.lsb-link-color-linkedin:hover,
+a .lsb-link-color-linkedin:hover {
+    background-color: #004265;
+    border-color: #004265;
+}
+
+/* Pinterest */
+.lsb-item-name-pinterest {
+    background-image: url("images/pinterest.ico");
+}
+
+.lsb-link-icon-pinterest{
+    content:url("images/pinterest.ico");
+}
+
+.lsb-link-name-pinterest,
+.lsb-link-icon-pinterest,
+.lsb-link-color-pinterest {
+    border-color: #cb2027;
+}
+
+.lsb-link-color-pinterest {
+    background-color: #cb2027;
+}
+
+.lsb-link-color-pinterest:hover,
+a .lsb-link-color-pinterest:hover {
+    background-color: #89161a;
+    border-color: #89161a;
+}
+
+/* Tumblr */
+.lsb-item-name-tumblr {
+    background-image: url("images/tumblr.ico");
+}
+
+.lsb-link-icon-tumblr{
+    content:url("images/tumblr.ico");
+}
+
+.lsb-link-name-tumblr,
+.lsb-link-icon-tumblr,
+.lsb-link-color-tumblr {
+    border-color: #35465c;
+}
+
+.lsb-link-color-tumblr {
+    background-color: #35465c;
+}
+
+.lsb-link-color-tumblr:hover,
+a .lsb-link-color-tumblr:hover {
+    background-color: #19212b;
+    border-color: #19212b;
+}
+
+/* Reddit */
+.lsb-item-name-reddit {
+    background-image: url("images/reddit.ico");
+}
+
+.lsb-link-icon-reddit{
+    content:url("images/reddit.ico");
+}
+
+.lsb-link-name-reddit,
+.lsb-link-icon-reddit,
+.lsb-link-color-reddit {
+    border-color: #ff5700;
+}
+
+.lsb-link-color-reddit {
+    background-color: #ff5700;
+}
+
+.lsb-link-color-reddit:hover,
+a .lsb-link-color-reddit:hover {
+    background-color: #b33d00;
+    border-color: #b33d00;
+}
+
+
+
+
+
+
+
+
+/* buttons with backgroud colors */
+
+
+
+
+
+
+
+
+
+
+.lsb-link-color-vk {
+  background-color: #5e82a8;
+  border-color: #5e82a8;
+}
+
+.lsb-link-color-vk:hover,
+a .lsb-link-color-vk:hover {
+  background-color: #415c78;
+  border-color: #415c78;
+}
+
+.lsb-link-color-xing {
+  background-color: #175e60;
+  border-color: #175e60;
+}
+
+.lsb-link-color-xing:hover,
+a .lsb-link-color-xing:hover {
+  background-color: #082222;
+  border-color: #082222;
+}
+
+.lsb-link-color-tumblr {
+  background-color: #35465c;
+  border-color: #35465c;
+}
+
+.lsb-link-color-tumblr:hover,
+a .lsb-link-color-tumblr:hover {
+  background-color: #19212b;
+  border-color: #19212b;
+}
 
 

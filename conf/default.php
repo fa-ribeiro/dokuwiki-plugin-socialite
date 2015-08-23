@@ -10,4 +10,4 @@
 
 $conf['networks']   = 'twitter facebook googleplus linkedin pinterest tumblr reddit';
 
-$conf['display']    = 'text';
+$conf['display']    = 'color';
