@@ -271,6 +271,30 @@ a .lsb-link-color-taringa:hover {
     border-color: #004178;
 }
 
+/* Email */
+.lsb-item-name-email {
+    background-image: url("images/email.ico");
+}
+
+.lsb-link-icon-email{
+    content:url("images/email.ico");
+}
+
+.lsb-link-name-email,
+.lsb-link-icon-email,
+.lsb-link-color-email {
+    border-color: #f4b83f;
+}
+
+.lsb-link-color-email {
+    background-color: #f4b83f;
+}
+
+.lsb-link-color-email:hover,
+a .lsb-link-color-email:hover {
+    background-color: #ab7b2c;
+    border-color: #ab7b2c;
+}
 
 
 /* buttons with backgroud colors */

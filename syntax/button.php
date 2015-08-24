@@ -70,8 +70,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         if($mode != 'xhtml') return false;
 
         // validation list of available social networks
-        $protected = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit', 'taringa');
-
+        $protected = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit', 'taringa', 'email');
 
         $renderer->doc .= '<ul class="lsb">';
         foreach ($data as $network) {
@@ -112,6 +111,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         // <a href="http://www.tumblr.com/share/link?url=YOUR-URL&description=YOUR-DESCRIPTION">Share on Tumblr</a>
         // <a href="http://www.reddit.com/submit?url=YOUR_URL&title=YOUR_TITLE">Share on Reddit</a>
         // <a href="http://www.taringa.net/widgets/share.php?url=YOUR_URL&body=YOUR-DESCRIPTION">Compartir en Taringa</a>
+        // <a href="mailto:?subject=YOUR-TITLE&body=YOUR-SUMMARY">Email</a>
 
         switch ($network) {
             case 'twitter':
@@ -145,6 +145,10 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
             case 'taringa':
                 $name = 'Taringa';
                 $href = 'http://www.taringa.net/widgets/share.php?url='. $url .'&body=' . $abstract;
+                break;
+            case 'email':
+                $name = 'Email';
+                $href = 'mailto:?subject='. $title .'&body=' . $url . ': '. $abstract;
                 break;
         }
 

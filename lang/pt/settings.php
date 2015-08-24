@@ -8,7 +8,7 @@
 // keys need to match the config setting name
 // $lang['fixme'] = 'FIXME';
 
-$lang['networks']   = 'A lista dos teus botões sociais favoritos, ordenados e separados por espaços.';
-$lang['networks']  .= ' Os nomes válidos são: twitter facebook google+ linkedin pinterest tumblr reddit taringa';
+$lang['networks']   = 'A lista dos teus botões sociais favoritos, ordenados e separados por espaços. Os nomes válidos são: ';
+$lang['networks']  .= 'twitter facebook google+ linkedin pinterest tumblr reddit taringa email';
 
 $lang['display']    = 'Opções de exibição: mostra texto ou apenas o ícone.';

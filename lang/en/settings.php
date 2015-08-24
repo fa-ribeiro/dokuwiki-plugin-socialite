@@ -8,7 +8,7 @@
 // keys need to match the config setting name
 // $lang['fixme'] = 'FIXME';
 
-$lang['networks']   = 'List of your favorite social buttons, space separated and in order of appearance.';
-$lang['networks']  .= ' Valid names are: twitter facebook googleplus linkedin pinterest tumblr reddit taringa';
+$lang['networks']   = 'List of your favorite social buttons, space separated and in order of appearance. Valid names are: ';
+$lang['networks']  .= 'twitter facebook googleplus linkedin pinterest tumblr reddit taringa email';
 
-$lang['display']    = 'Display options: show social buttons with icon and name, just the icon or name and backgroud color.';
+$lang['display']    = 'Display options: show social buttons with icon and name, just the icon or name on backgroud color.';
