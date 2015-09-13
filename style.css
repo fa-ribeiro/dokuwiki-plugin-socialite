@@ -271,6 +271,56 @@ a .lsb-link-color-taringa:hover {
     border-color: #004178;
 }
 
+/* Xing */
+.lsb-item-name-xing {
+    background-image: url("images/xing.ico");
+}
+
+.lsb-link-icon-xing{
+    content:url("images/xing.ico");
+}
+
+.lsb-link-name-xing,
+.lsb-link-icon-xing,
+.lsb-link-color-xing {
+    border-color: #175e60;
+}
+
+.lsb-link-color-xing {
+    background-color: #175e60;
+}
+
+.lsb-link-color-xing:hover,
+a .lsb-link-color-xing:hover {
+    background-color: #082222;
+    border-color: #082222;
+}
+
+/* Vk */
+.lsb-item-name-vk {
+    background-image: url("images/vk.ico");
+}
+
+.lsb-link-icon-vk{
+    content:url("images/vk.ico");
+}
+
+.lsb-link-name-vk,
+.lsb-link-icon-vk,
+.lsb-link-color-vk {
+    border-color: #5e82a8;
+}
+
+.lsb-link-color-vk {
+    background-color: #5e82a8;
+}
+
+.lsb-link-color-vk:hover,
+a .lsb-link-color-vk:hover {
+    background-color: #415c78;
+    border-color: #415c78;
+}
+
 /* Email */
 .lsb-item-name-email {
     background-image: url("images/email.ico");
@@ -294,38 +344,4 @@ a .lsb-link-color-taringa:hover {
 a .lsb-link-color-email:hover {
     background-color: #ab7b2c;
     border-color: #ab7b2c;
-}
-
-
-/* buttons with backgroud colors */
-
-
-
-
-
-
-
-
-
-
-.lsb-link-color-vk {
-  background-color: #5e82a8;
-  border-color: #5e82a8;
-}
-
-.lsb-link-color-vk:hover,
-a .lsb-link-color-vk:hover {
-  background-color: #415c78;
-  border-color: #415c78;
-}
-
-.lsb-link-color-xing {
-  background-color: #175e60;
-  border-color: #175e60;
-}
-
-.lsb-link-color-xing:hover,
-a .lsb-link-color-xing:hover {
-  background-color: #082222;
-  border-color: #082222;
 }
