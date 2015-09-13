@@ -4,4 +4,4 @@ email  pinguim.ribeiro@gmail.com
 date   2015-08-21
 name   lsb plugin
 desc   Lightweight social buttons
-url    https://www.dokuwiki.org/plugin:lsb
+url    https://servidordebian.org

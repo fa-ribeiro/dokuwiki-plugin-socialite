@@ -8,6 +8,8 @@
 //$conf['fixme']    = 'FIXME';
 
 
-$conf['networks']   = 'twitter facebook googleplus linkedin pinterest tumblr reddit taringa email';
+$conf['networks']       = 'twitter facebook googleplus linkedin pinterest tumblr reddit taringa email';
 
-$conf['display']    = 'color';
+$conf['display']        = 'color';
+
+$conf['twitter_user']   = '';

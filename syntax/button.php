@@ -136,6 +136,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
             case 'twitter':
                 $name = 'Twitter';
                 $href = 'https://twitter.com/intent/tweet?url=' . $url . '&text='. $title;
+                if (!empty($this->getConf('twitter_user'))) { $href .= "&via=" . rawurlencode($this->getConf('twitter_user')); }
                 break;
             case 'facebook':
                 $name = 'Facebook';
