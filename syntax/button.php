@@ -82,7 +82,10 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         // validation list of available display modes
         $valid_displays = array('name', 'icon', 'color');
         // validation list of available social networks
-        $valid_networks = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit', 'taringa', 'xing', 'vk', 'email');
+        $valid_networks = array('twitter', 'facebook', 'googleplus',
+                                'linkedin', 'pinterest', 'tumblr',
+                                'reddit', 'taringa', 'stumbleupon',
+                                'xing', 'vk', 'email');
 
         if (in_array($data['display'], $valid_displays)) {
             $display = $data['display'];
@@ -120,17 +123,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         // see: http://builtbyboon.com/blog/simple-social-sharing-buttons
         // see: https://github.com/cferdinandi/social-sharing
         // see: https://github.com/bradvin/social-share-urls
-        // <a href="https://twitter.com/intent/tweet?text=YOUR-TITLE&url=YOUR-URL&via=TWITTER-HANDLE&hashtags=YOUR,HASH,TAGS">Tweet</a>
-        // <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR-URL">Share on Facebook</a>
-        // <a href="https://plus.google.com/share?url=YOUR-URL">Plus on googleplus</a>
-        // <a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR-URL&title=YOUR-TITLE&summary=YOUR-SUMMARY&source=YOUR-URL">Share on LinkedIn</a>
-        // <a href="https://pinterest.com/pin/create/button/?url=YOUR-URL&description=YOUR-DESCRIPTION&media=YOUR-IMAGE-SRC">Pin on Pinterest</a>
-        // <a href="https://vk.com/share.php?url=YOUR-URL&title=YOUR-TITLE&description=YOUR-DESCRIPTION&image=YOUR-IMAGE-SRC&noparse=true">Share on VK</a>
-        // <a href="https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url=YOUR-URL">Share on Xing</a>
-        // <a href="http://www.tumblr.com/share/link?url=YOUR-URL&description=YOUR-DESCRIPTION">Share on Tumblr</a>
-        // <a href="http://www.reddit.com/submit?url=YOUR_URL&title=YOUR_TITLE">Share on Reddit</a>
-        // <a href="http://www.taringa.net/widgets/share.php?url=YOUR_URL&body=YOUR-DESCRIPTION">Compartir en Taringa</a>
-        // <a href="mailto:?subject=YOUR-TITLE&body=YOUR-SUMMARY">Email</a>
+        // see: http://brandcolors.net/
 
         switch ($network) {
             case 'twitter':
@@ -165,6 +158,10 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
             case 'taringa':
                 $name = 'Taringa';
                 $href = 'http://www.taringa.net/widgets/share.php?url='. $url .'&body=' . $title;
+                break;
+            case 'stumbleupon':
+                $name = 'StumbleUpon';
+                $href = 'http://www.stumbleupon.com/submit?url='. $url .'&title=' . $title;
                 break;
             case 'xing':
                 $name = 'Xing';

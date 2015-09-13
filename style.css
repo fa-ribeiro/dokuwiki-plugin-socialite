@@ -271,6 +271,31 @@ a .socialite-link-color-taringa:hover {
     border-color: #004178;
 }
 
+/*  StumbleUpon*/
+.socialite-item-name-stumbleupon {
+    background-image: url("images/stumbleupon.ico");
+}
+
+.socialite-link-icon-stumbleupon{
+    content:url("images/stumbleupon.ico");
+}
+
+.socialite-link-name-stumbleupon,
+.socialite-link-icon-stumbleupon,
+.socialite-link-color-stumbleupon {
+    border-color: #eb4924;
+}
+
+.socialite-link-color-stumbleupon {
+    background-color: #eb4924;
+}
+
+.socialite-link-color-stumbleupon:hover,
+a .socialite-link-color-stumbleupon:hover {
+    background-color: #bc3a1d;
+    border-color: #bc3a1d;
+}
+
 /* Xing */
 .socialite-item-name-xing {
     background-image: url("images/xing.ico");
