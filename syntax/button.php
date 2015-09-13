@@ -48,7 +48,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
      * @return array Data for the renderer
      */
     public function handle($match, $state, $pos, Doku_Handler &$handler){
-        $match = strtolower(trim(substr($match, 5, -2))); // strip markup
+        $match = strtolower(trim(substr($match, 11, -2))); // strip markup
 
         // checks if a display mode is passed
         if (substr($match, 0, 1) === ':')  {
