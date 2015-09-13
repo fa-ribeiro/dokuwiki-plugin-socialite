@@ -83,7 +83,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
         // validation list of available display modes
         $valid_displays = array('name', 'icon', 'color');
         // validation list of available social networks
-        $valid_networks = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit', 'taringa', 'email');
+        $valid_networks = array('twitter', 'facebook', 'googleplus', 'linkedin', 'pinterest', 'tumblr', 'reddit', 'taringa', 'xing', 'email');
 
         if (in_array($data['display'], $valid_displays)) {
             $display = $data['display'];
@@ -166,6 +166,10 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
             case 'taringa':
                 $name = 'Taringa';
                 $href = 'http://www.taringa.net/widgets/share.php?url='. $url .'&body=' . $title;
+                break;
+            case 'xing':
+                $name = 'Xing';
+                $href = 'https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url='. $url;
                 break;
             case 'email':
                 $name = 'Email';
