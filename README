@@ -1,12 +1,12 @@
-lsb Plugin for DokuWiki
+Socialite Plugin for DokuWiki
 
-Lightweight social buttons
+Lightweight responsive social buttons
 
 All documentation for this plugin can be found at
-https://www.dokuwiki.org/plugin:lsb
+https://www.dokuwiki.org/plugin:socialite
 
 If you install this plugin manually, make sure it is installed in
-lib/plugins/lsb/ - if the folder is called different it
+lib/plugins/socialite/ - if the folder is called different it
 will not work!
 
 Please refer to http://www.dokuwiki.org/plugins for additional info

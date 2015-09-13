@@ -1,7 +1,7 @@
-base   lsb
+base   socialite
 author Fernando Ribeiro
 email  pinguim.ribeiro@gmail.com
 date   2015-08-21
-name   lsb plugin
-desc   Lightweight social buttons
-url    https://servidordebian.org
+name   Locialite plugin
+desc   Lightweight responsive social buttons
+url    https://www.dokuwiki.org/plugin:socialite

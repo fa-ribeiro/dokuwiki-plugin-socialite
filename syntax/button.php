@@ -1,6 +1,6 @@
 <?php
 /**
- * DokuWiki Plugin lsb (Syntax Component)
+ * DokuWiki Plugin socialite (Syntax Component)
  *
  * @license GPL 2 http://www.gnu.org/licenses/gpl-2.0.html
  * @author  Fernando Ribeiro <pinguim.ribeiro@gmail.com>
@@ -9,7 +9,7 @@
 // must be run within Dokuwiki
 if (!defined('DOKU_INC')) die();
 
-class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
+class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
     /**
      * @return string Syntax mode type
      */
@@ -35,12 +35,11 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
      * @param string $mode Parser mode
      */
     public function connectTo($mode) {
-        $this->Lexer->addSpecialPattern('~~lsb\b.*?~~',$mode,'plugin_lsb_button');
-        $this->Lexer->addSpecialPattern('~~LSB\b.*?~~',$mode,'plugin_lsb_button');
+        $this->Lexer->addSpecialPattern('~~socialite\b.*?~~',$mode,'plugin_socialite_button');
     }
 
     /**
-     * Handle matches of the lsb syntax
+     * Handle matches of the socialite syntax
      *
      * @param string $match The match of the syntax
      * @param int    $state The state of the handler
@@ -91,10 +90,10 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
             $display = $this->getConf('display') ;
         }
 
-        $renderer->doc .= '<ul class="lsb">';
+        $renderer->doc .= '<ul class="socialite">';
         foreach ($data['networks'] as $network) {
             if (in_array($network, $valid_networks)) {
-                $renderer->doc .= $this->lsb_button($display, $network);
+                $renderer->doc .= $this->socialite_button($display, $network);
             }
         }
         $renderer->doc .= '</ul>';
@@ -109,7 +108,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
      * @param string    $network    The social network to render the button to
      * @return string   Xhtml code for button.
      */
-    protected function lsb_button ($display, $network) {
+    protected function socialite_button ($display, $network) {
         global $ID;
         global $INFO;
 
@@ -181,8 +180,8 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
                 break;
         }
 
-        $xhtml  = '<li class="lsb-item-' . $class . '">';
-        $xhtml .= '<a class="lsb-link-' . $class . '" href="' . $href . '">' . $name . '</a>';
+        $xhtml  = '<li class="socialite-item-' . $class . '">';
+        $xhtml .= '<a class="socialite-link-' . $class . '" href="' . $href . '">' . $name . '</a>';
         $xhtml .= '</li>';
 
         return $xhtml;
