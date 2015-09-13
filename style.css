@@ -271,6 +271,31 @@ a .socialite-link-color-taringa:hover {
     border-color: #004178;
 }
 
+/*  Delicious*/
+.socialite-item-name-delicious {
+    background-image: url("images/delicious.ico");
+}
+
+.socialite-link-icon-delicious{
+    content:url("images/delicious.ico");
+}
+
+.socialite-link-name-delicious,
+.socialite-link-icon-delicious,
+.socialite-link-color-delicious {
+    border-color: #3399ff;
+}
+
+.socialite-link-color-delicious {
+    background-color: #3399ff;
+}
+
+.socialite-link-color-delicious:hover,
+a .socialite-link-color-delicious:hover {
+    background-color: #297acc;
+    border-color: #297acc;
+}
+
 /*  StumbleUpon*/
 .socialite-item-name-stumbleupon {
     background-image: url("images/stumbleupon.ico");

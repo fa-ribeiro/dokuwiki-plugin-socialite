@@ -8,8 +8,9 @@
 //$meta['fixme'] = array('string');
 
 
-$meta['networks']       = array('string', '_pattern' => '/^[a-zA-Z\s]*$/');
+$meta['networks']           = array('string', '_pattern' => '/^[a-zA-Z\s]*$/');
 
-$meta['display']        = array('multichoice','_choices' => array('name', 'icon', 'color'));
+$meta['display']            = array('multichoice','_choices' => array('name', 'icon', 'color'));
 
-$meta['twitter_user']   = array('string', '_pattern' => '/^[a-zA-Z0-9_]*$/');
+$meta['twitter_user']       = array('string', '_pattern' => '/^[a-zA-Z0-9_]*$/');
+$meta['delicious_provider'] = array('string');
