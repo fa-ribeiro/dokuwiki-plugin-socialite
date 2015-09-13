@@ -120,6 +120,7 @@ class syntax_plugin_lsb_button extends DokuWiki_Syntax_Plugin {
 
         // see: http://builtbyboon.com/blog/simple-social-sharing-buttons
         // see: https://github.com/cferdinandi/social-sharing
+        // see: https://github.com/bradvin/social-share-urls
         // <a href="https://twitter.com/intent/tweet?text=YOUR-TITLE&url=YOUR-URL&via=TWITTER-HANDLE&hashtags=YOUR,HASH,TAGS">Tweet</a>
         // <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR-URL">Share on Facebook</a>
         // <a href="https://plus.google.com/share?url=YOUR-URL">Plus on googleplus</a>

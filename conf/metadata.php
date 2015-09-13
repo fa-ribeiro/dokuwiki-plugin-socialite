@@ -12,4 +12,4 @@ $meta['networks']       = array('string', '_pattern' => '/^[a-zA-Z\s]*$/');
 
 $meta['display']        = array('multichoice','_choices' => array('name', 'icon', 'color'));
 
-$meta['twitter_user']   = array('string', '_pattern' => '/^[a-zA-Z_]*$/');
+$meta['twitter_user']   = array('string', '_pattern' => '/^[a-zA-Z0-9_]*$/');
