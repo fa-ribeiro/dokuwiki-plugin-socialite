@@ -129,7 +129,8 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
             case 'twitter':
                 $name = 'Twitter';
                 $href = 'https://twitter.com/intent/tweet?url=' . $url . '&text='. $title;
-                if (!empty($this->getConf('twitter_user'))) { $href .= "&via=" . rawurlencode($this->getConf('twitter_user')); }
+                $twitter_user = $this->getConf('twitter_user');
+                if (!empty($twitter_user)) { $href .= "&via=" . rawurlencode($twitter_user); }
                 break;
             case 'facebook':
                 $name = 'Facebook';
@@ -162,7 +163,8 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
             case 'delicious':
                 $name = 'Delicious';
                 $href = 'https://delicious.com/save?v=5&noui&jump=close&url='. $url .'&title=' . $title;
-                if (!empty($this->getConf('delicious_provider'))) { $href .= "&provider=" . rawurlencode($this->getConf('delicious_provider')); }
+                $delicious_provider = $this->getConf('delicious_provider');
+                if (!empty($delicious_provider)) { $href .= "&provider=" . rawurlencode($delicious_provider); }
                 break;
             case 'stumbleupon':
                 $name = 'StumbleUpon';
