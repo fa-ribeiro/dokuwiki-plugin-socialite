@@ -2,7 +2,7 @@
 /**
  * english language file for lsb plugin
  *
- * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
+ * @author Makito Katsube <katsubemakito@gmail.com>
  */
 
 // keys need to match the config setting name
