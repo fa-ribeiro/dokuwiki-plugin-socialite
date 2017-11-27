@@ -73,10 +73,10 @@
 
 /* Twitter */
 .socialite-item-name-twitter {
-    background-image: url("images/twitter.ico");
+    background-image: url("images/twitter.svg");
 }
 .socialite-link-icon-twitter{
-    content:url("images/twitter.ico");
+    content:url("images/twitter.svg");
 }
 
 .socialite-link-name-twitter,
@@ -97,11 +97,11 @@ a .socialite-link-color-twitter:hover {
 
 /* Facebook */
 .socialite-item-name-facebook {
-    background-image: url("images/facebook.ico");
+    background-image: url("images/facebook.svg");
 }
 
 .socialite-link-icon-facebook{
-    content:url("images/facebook.ico");
+    content:url("images/facebook.svg");
 }
 
 .socialite-link-name-facebook,
@@ -122,11 +122,11 @@ a .socialite-link-color-facebook:hover {
 
 /* Google+ */
 .socialite-item-name-googleplus {
-    background-image: url("images/googleplus.ico");
+    background-image: url("images/google_plus.svg");
 }
 
 .socialite-link-icon-googleplus{
-    content:url("images/googleplus.ico");
+    content:url("images/googleplus.svg");
 }
 
 .socialite-link-name-googleplus,
@@ -147,11 +147,11 @@ a .socialite-link-color-googleplus:hover {
 
 /* LinkedIn */
 .socialite-item-name-linkedin {
-    background-image: url("images/linkedin.ico");
+    background-image: url("images/linkedin.svg");
 }
 
 .socialite-link-icon-linkedin{
-    content:url("images/linkedin.ico");
+    content:url("images/linkedin.svg");
 }
 
 .socialite-link-name-linkedin,
@@ -173,11 +173,11 @@ a .socialite-link-color-linkedin:hover {
 
 /* Pinterest */
 .socialite-item-name-pinterest {
-    background-image: url("images/pinterest.ico");
+    background-image: url("images/pinterest.svg");
 }
 
 .socialite-link-icon-pinterest{
-    content:url("images/pinterest.ico");
+    content:url("images/pinterest.svg");
 }
 
 .socialite-link-name-pinterest,
@@ -198,11 +198,11 @@ a .socialite-link-color-pinterest:hover {
 
 /* Tumblr */
 .socialite-item-name-tumblr {
-    background-image: url("images/tumblr.ico");
+    background-image: url("images/tumblr.svg");
 }
 
 .socialite-link-icon-tumblr{
-    content:url("images/tumblr.ico");
+    content:url("images/tumblr.svg");
 }
 
 .socialite-link-name-tumblr,
@@ -223,11 +223,11 @@ a .socialite-link-color-tumblr:hover {
 
 /* Reddit */
 .socialite-item-name-reddit {
-    background-image: url("images/reddit.ico");
+    background-image: url("images/reddit.svg");
 }
 
 .socialite-link-icon-reddit{
-    content:url("images/reddit.ico");
+    content:url("images/reddit.svg");
 }
 
 .socialite-link-name-reddit,
@@ -248,11 +248,11 @@ a .socialite-link-color-reddit:hover {
 
 /* Taringa */
 .socialite-item-name-taringa {
-    background-image: url("images/taringa.ico");
+    background-image: url("images/taringa.svg");
 }
 
 .socialite-link-icon-taringa{
-    content:url("images/taringa.ico");
+    content:url("images/taringa.svg");
 }
 
 .socialite-link-name-taringa,
@@ -273,11 +273,11 @@ a .socialite-link-color-taringa:hover {
 
 /*  Delicious*/
 .socialite-item-name-delicious {
-    background-image: url("images/delicious.ico");
+    background-image: url("images/delicious.svg");
 }
 
 .socialite-link-icon-delicious{
-    content:url("images/delicious.ico");
+    content:url("images/delicious.svg");
 }
 
 .socialite-link-name-delicious,
@@ -298,11 +298,11 @@ a .socialite-link-color-delicious:hover {
 
 /*  StumbleUpon*/
 .socialite-item-name-stumbleupon {
-    background-image: url("images/stumbleupon.ico");
+    background-image: url("images/stumbleupon.svg");
 }
 
 .socialite-link-icon-stumbleupon{
-    content:url("images/stumbleupon.ico");
+    content:url("images/stumbleupon.svg");
 }
 
 .socialite-link-name-stumbleupon,
@@ -323,11 +323,11 @@ a .socialite-link-color-stumbleupon:hover {
 
 /* Xing */
 .socialite-item-name-xing {
-    background-image: url("images/xing.ico");
+    background-image: url("images/xing.svg");
 }
 
 .socialite-link-icon-xing{
-    content:url("images/xing.ico");
+    content:url("images/xing.svg");
 }
 
 .socialite-link-name-xing,
@@ -348,11 +348,11 @@ a .socialite-link-color-xing:hover {
 
 /* Vk */
 .socialite-item-name-vk {
-    background-image: url("images/vk.ico");
+    background-image: url("images/vk.svg");
 }
 
 .socialite-link-icon-vk{
-    content:url("images/vk.ico");
+    content:url("images/vk.svg");
 }
 
 .socialite-link-name-vk,
@@ -373,11 +373,11 @@ a .socialite-link-color-vk:hover {
 
 /* Email */
 .socialite-item-name-email {
-    background-image: url("images/email.ico");
+    background-image: url("images/email.svg");
 }
 
 .socialite-link-icon-email{
-    content:url("images/email.ico");
+    content:url("images/email.svg");
 }
 
 .socialite-link-name-email,
