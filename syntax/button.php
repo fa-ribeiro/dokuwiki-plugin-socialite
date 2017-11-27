@@ -108,22 +108,16 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
      * Render xhtml output for share buttons
      *
      * @param string    $display    The display mode
-     * @param string    $network    The social network to render the button to
+     * @param string    $network    The social network
      * @return string   Xhtml code for button.
      */
     protected function socialite_button ($display, $network) {
         global $ID;
         global $INFO;
 
-        $url      = rawurlencode(wl($ID,'',true));
+        $url      = rawurlencode(wl($ID, '', true));
         $title    = rawurlencode(($INFO['meta']['title']) ? $INFO['meta']['title'] : $meta);
         $abstract = rawurlencode($INFO['meta']['description']['abstract']);
-        $class    = $display . '-' . $network;
-
-        // see: http://builtbyboon.com/blog/simple-social-sharing-buttons
-        // see: https://github.com/cferdinandi/social-sharing
-        // see: https://github.com/bradvin/social-share-urls
-        // see: http://brandcolors.net/
 
         switch ($network) {
             case 'twitter':
@@ -182,8 +176,8 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
                 break;
         }
 
-        $xhtml  = '<li class="socialite-item-' . $class . '">';
-        $xhtml .= '<a class="socialite-link-' . $class . '" href="' . $href . '">' . $name . '</a>';
+        $xhtml  = '<li class="' . $display . '">';
+        $xhtml .= '<a class="' . $network . '" href="' . $href . '">' . $name . '</a>';
         $xhtml .= '</li>';
 
         return $xhtml;
