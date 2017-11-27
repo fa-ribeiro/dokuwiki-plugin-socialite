@@ -1,68 +1,43 @@
-/* -- Begin social sharing buttons
-------------------------------------------------------------- */
-
 .socialite {
     padding-left: 0;
     list-style: none;
 }
 
-
-[class*="socialite-link-"] {
-    font-size: .875em;
-    border-radius: 2px;
-    border: 1px solid;
-    box-shadow: 0 0 .5em #999;
-    transition: background-color ease-in-out .5s, color ease-in-out .5s, border-color ease-in-out .5s, box-shadow ease-in-out .5s;
-    width: 16px;
-    height: 16px;
-}
-
-[class*="socialite-link-"]:hover {
-    box-shadow: 0 0 1em #666;
-}
-
-[class*="socialite-link-name-"] {
-    padding: .25em .25em .25em 1.75em;
-}
-
-[class*="socialite-link-icon-"],
-[class*="socialite-link-color-"] {
-    padding: .25em .25em .25em .25em;
-}
-
-[class*="socialite-link-color-"],
-[class*="socialite-link-color-"]:hover {
-      color: #ffffff;
-}
-
-
-[class*="socialite-item-name-"],
-[class*="socialite-item-icon-"] {
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: 5px center;
-}
-
-[class*="socialite-item-"] {
+.socialite li
+{
     display: inline-block;
     margin: .25em;
     line-height: 24px;
 }
 
-[class*="socialite-item-"] a:link,
-[class*="socialite-item-"] a:visited {
+.socialite li a {
+    font-size: .875em;
+    border-radius: 2px;
+    border: 1px solid;
+    box-shadow: 0 0 .5em #999;
+    transition: background-color ease-in-out .5s, color ease-in-out .5s, border-color ease-in-out .5s, box-shadow ease-in-out .5s;
+}
+
+.socialite li a:hover {
+    box-shadow: 0 0 1em #666;
+}
+
+.socialite li a:link,
+.socialite li a:visited {
     text-decoration: none;
 }
 
-[class*="socialite-item-name-"] a:link,
-[class*="socialite-item-name-"] a:visited,
-[class*="socialite-item-icon-"] a:link,
-[class*="socialite-item-icon-"] a:visited {
+.socialite li.name a,
+.socialite li.icon a {
+    background-size: 1.25em;
+    background-repeat: no-repeat;
+    background-position: .25em center;
+    padding: .25em .25em .25em 1.75em;
     color: #000000;
 }
-
-[class*="socialite-item-color-"] a:link,
-[class*="socialite-item-color-"] a:visited {
+.socialite li.color a
+{
+    padding: .25em .25em .25em .25em;
     color: #ffffff;
 }
 
@@ -71,327 +46,224 @@
  * Social network specific settings
  */
 
+
 /* Twitter */
-.socialite-item-name-twitter {
+
+.socialite li.name .twitter,
+.socialite li.icon .twitter,
+.socialite li.color .twitter {
+   border-color: #1da1f3;
+}
+
+.socialite li.name .twitter,
+.socialite li.icon .twitter {
     background-image: url("images/twitter.svg");
 }
-.socialite-link-icon-twitter{
-    content:url("images/twitter.svg");
-}
 
-.socialite-link-name-twitter,
-.socialite-link-icon-twitter,
-.socialite-link-color-twitter {
-    border-color: #41b7d8;
-}
-
-.socialite-link-color-twitter {
-    background-color: #41b7d8;
-}
-
-.socialite-link-color-twitter:hover,
-a .socialite-link-color-twitter:hover {
-    background-color: #238caa;
-    border-color: #238caa;
+.socialite li.color .twitter {
+    background-color: #1da1f3;
 }
 
 /* Facebook */
-.socialite-item-name-facebook {
+
+.socialite li.name .facebook,
+.socialite li.icon .facebook,
+.socialite li.color .facebook {
+   border-color: #3b5998;
+}
+
+.socialite li.name .facebook,
+.socialite li.icon .facebook {
     background-image: url("images/facebook.svg");
 }
 
-.socialite-link-icon-facebook{
-    content:url("images/facebook.svg");
-}
-
-.socialite-link-name-facebook,
-.socialite-link-icon-facebook,
-.socialite-link-color-facebook {
-    border-color: #3b5997;
-}
-
-.socialite-link-color-facebook {
-    background-color: #3b5997;
-}
-
-.socialite-link-color-facebook:hover,
-a .socialite-link-color-facebook:hover {
-    background-color: #263960;
-    border-color: #263960;
+.socialite li.color .facebook {
+    background-color: #3b5998;
 }
 
 /* Google+ */
-.socialite-item-name-googleplus {
+
+.socialite li.name .googleplus,
+.socialite li.icon .googleplus,
+.socialite li.color .googleplus {
+    border-color: #dd4f43;
+}
+
+.socialite li.name .googleplus,
+.socialite li.icon .googleplus {
     background-image: url("images/google_plus.svg");
 }
 
-.socialite-link-icon-googleplus{
-    content:url("images/googleplus.svg");
-}
-
-.socialite-link-name-googleplus,
-.socialite-link-icon-googleplus,
-.socialite-link-color-googleplus {
-    border-color: #d64937;
-}
-
-.socialite-link-color-googleplus {
-    background-color: #d64937;
-}
-
-.socialite-link-color-googleplus:hover,
-a .socialite-link-color-googleplus:hover {
-    background-color: #a02f21;
-    border-color: #a02f21;
+.socialite li.color .googleplus {
+    background-color: #dd4f43;
 }
 
 /* LinkedIn */
-.socialite-item-name-linkedin {
+
+.socialite li.name .linkedin,
+.socialite li.icon .linkedin,
+.socialite li.color .linkedin {
+    border-color: #0077b5;
+}
+
+.socialite li.name .linkedin,
+.socialite li.icon .linkedin {
     background-image: url("images/linkedin.svg");
 }
 
-.socialite-link-icon-linkedin{
-    content:url("images/linkedin.svg");
-}
-
-.socialite-link-name-linkedin,
-.socialite-link-icon-linkedin,
-.socialite-link-color-linkedin {
-    border-color: #0073b2;
-}
-
-.socialite-link-color-linkedin {
-    background-color: #0073b2;
-
-}
-
-.socialite-link-color-linkedin:hover,
-a .socialite-link-color-linkedin:hover {
-    background-color: #004265;
-    border-color: #004265;
+.socialite li.color .linkedin {
+    background-color: #0077b5;
 }
 
 /* Pinterest */
-.socialite-item-name-pinterest {
+
+.socialite li.name .pinterest,
+.socialite li.icon .pinterest,
+.socialite li.color .pinterest {
+    border-color: #bd081b;
+}
+
+.socialite li.name .pinterest,
+.socialite li.icon .pinterest {
     background-image: url("images/pinterest.svg");
 }
 
-.socialite-link-icon-pinterest{
-    content:url("images/pinterest.svg");
-}
-
-.socialite-link-name-pinterest,
-.socialite-link-icon-pinterest,
-.socialite-link-color-pinterest {
-    border-color: #cb2027;
-}
-
-.socialite-link-color-pinterest {
-    background-color: #cb2027;
-}
-
-.socialite-link-color-pinterest:hover,
-a .socialite-link-color-pinterest:hover {
-    background-color: #89161a;
-    border-color: #89161a;
+.socialite li.color .pinterest {
+    background-color: #bd081b;
 }
 
 /* Tumblr */
-.socialite-item-name-tumblr {
+
+.socialite li.name .tumblr,
+.socialite li.icon .tumblr,
+.socialite li.color .tumblr {
+    border-color: #39475d;
+}
+
+.socialite li.name .tumblr,
+.socialite li.icon .tumblr {
     background-image: url("images/tumblr.svg");
 }
 
-.socialite-link-icon-tumblr{
-    content:url("images/tumblr.svg");
-}
-
-.socialite-link-name-tumblr,
-.socialite-link-icon-tumblr,
-.socialite-link-color-tumblr {
-    border-color: #35465c;
-}
-
-.socialite-link-color-tumblr {
-    background-color: #35465c;
-}
-
-.socialite-link-color-tumblr:hover,
-a .socialite-link-color-tumblr:hover {
-    background-color: #19212b;
-    border-color: #19212b;
+.socialite li.color .tumblr {
+    background-color: #39475d;
 }
 
 /* Reddit */
-.socialite-item-name-reddit {
+
+.socialite li.name .reddit,
+.socialite li.icon .reddit,
+.socialite li.color .reddit {
+    border-color: #ff4500;
+}
+
+.socialite li.name .reddit,
+.socialite li.icon .reddit {
     background-image: url("images/reddit.svg");
 }
 
-.socialite-link-icon-reddit{
-    content:url("images/reddit.svg");
-}
-
-.socialite-link-name-reddit,
-.socialite-link-icon-reddit,
-.socialite-link-color-reddit {
-    border-color: #ff5700;
-}
-
-.socialite-link-color-reddit {
-    background-color: #ff5700;
-}
-
-.socialite-link-color-reddit:hover,
-a .socialite-link-color-reddit:hover {
-    background-color: #b33d00;
-    border-color: #b33d00;
+.socialite li.color .reddit {
+    background-color: #ff4500;
 }
 
 /* Taringa */
-.socialite-item-name-taringa {
-    background-image: url("images/taringa.svg");
-}
 
-.socialite-link-icon-taringa{
-    content:url("images/taringa.svg");
-}
-
-.socialite-link-name-taringa,
-.socialite-link-icon-taringa,
-.socialite-link-color-taringa {
+.socialite li.name .taringa,
+.socialite li.icon .taringa,
+.socialite li.color .taringa {
     border-color: #005dab;
 }
 
-.socialite-link-color-taringa {
+.socialite li.name .taringa,
+.socialite li.icon .reddit {
+    background-image: url("images/taringa.svg");
+}
+
+.socialite li.color .taringa {
     background-color: #005dab;
 }
 
-.socialite-link-color-taringa:hover,
-a .socialite-link-color-taringa:hover {
-    background-color: #004178;
-    border-color: #004178;
+/* Delicious */
+
+.socialite li.name .delicious,
+.socialite li.icon .delicious,
+.socialite li.color .delicious {
+    border-color: #3399FF;
 }
 
-/*  Delicious*/
-.socialite-item-name-delicious {
+.socialite li.name .delicious,
+.socialite li.icon .delicious {
     background-image: url("images/delicious.svg");
 }
 
-.socialite-link-icon-delicious{
-    content:url("images/delicious.svg");
+.socialite li.color .delicious {
+    background-color: #3399FF;
 }
 
-.socialite-link-name-delicious,
-.socialite-link-icon-delicious,
-.socialite-link-color-delicious {
-    border-color: #3399ff;
-}
+/* StumbleUpon */
 
-.socialite-link-color-delicious {
-    background-color: #3399ff;
-}
-
-.socialite-link-color-delicious:hover,
-a .socialite-link-color-delicious:hover {
-    background-color: #297acc;
-    border-color: #297acc;
-}
-
-/*  StumbleUpon*/
-.socialite-item-name-stumbleupon {
-    background-image: url("images/stumbleupon.svg");
-}
-
-.socialite-link-icon-stumbleupon{
-    content:url("images/stumbleupon.svg");
-}
-
-.socialite-link-name-stumbleupon,
-.socialite-link-icon-stumbleupon,
-.socialite-link-color-stumbleupon {
+.socialite li.name .stumbleupon,
+.socialite li.icon .stumbleupon,
+.socialite li.color .stumbleupon {
     border-color: #eb4924;
 }
 
-.socialite-link-color-stumbleupon {
+.socialite li.name .stumbleupon,
+.socialite li.icon .stumbleupon {
+    background-image: url("images/stumbleupon.svg");
+}
+
+.socialite li.color .stumbleupon {
     background-color: #eb4924;
 }
 
-.socialite-link-color-stumbleupon:hover,
-a .socialite-link-color-stumbleupon:hover {
-    background-color: #bc3a1d;
-    border-color: #bc3a1d;
-}
-
 /* Xing */
-.socialite-item-name-xing {
-    background-image: url("images/xing.svg");
-}
 
-.socialite-link-icon-xing{
-    content:url("images/xing.svg");
-}
-
-.socialite-link-name-xing,
-.socialite-link-icon-xing,
-.socialite-link-color-xing {
+.socialite li.name .xing,
+.socialite li.icon .xing,
+.socialite li.color .xing {
     border-color: #175e60;
 }
 
-.socialite-link-color-xing {
+.socialite li.name .xing,
+.socialite li.icon .xing {
+    background-image: url("images/xing.svg");
+}
+
+.socialite li.color .xing {
     background-color: #175e60;
 }
 
-.socialite-link-color-xing:hover,
-a .socialite-link-color-xing:hover {
-    background-color: #082222;
-    border-color: #082222;
+/* Vk */
+
+.socialite li.name .vk,
+.socialite li.icon .vk,
+.socialite li.color .vk {
+    border-color: #4c75a3;
 }
 
-/* Vk */
-.socialite-item-name-vk {
+.socialite li.name .vk,
+.socialite li.icon .vk {
     background-image: url("images/vk.svg");
 }
 
-.socialite-link-icon-vk{
-    content:url("images/vk.svg");
-}
-
-.socialite-link-name-vk,
-.socialite-link-icon-vk,
-.socialite-link-color-vk {
-    border-color: #5e82a8;
-}
-
-.socialite-link-color-vk {
-    background-color: #5e82a8;
-}
-
-.socialite-link-color-vk:hover,
-a .socialite-link-color-vk:hover {
-    background-color: #415c78;
-    border-color: #415c78;
+.socialite li.color .vk {
+    background-color: #4c75a3;
 }
 
 /* Email */
-.socialite-item-name-email {
+
+.socialite li.name .email,
+.socialite li.icon .email,
+.socialite li.color .email {
+    border-color: #673147;
+}
+
+.socialite li.name .email,
+.socialite li.icon .email {
     background-image: url("images/email.svg");
 }
 
-.socialite-link-icon-email{
-    content:url("images/email.svg");
-}
-
-.socialite-link-name-email,
-.socialite-link-icon-email,
-.socialite-link-color-email {
-    border-color: #f4b83f;
-}
-
-.socialite-link-color-email {
-    background-color: #f4b83f;
-}
-
-.socialite-link-color-email:hover,
-a .socialite-link-color-email:hover {
-    background-color: #ab7b2c;
-    border-color: #ab7b2c;
+.socialite li.color .email {
+    background-color: #673147;
 }
