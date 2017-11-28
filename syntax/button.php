@@ -84,8 +84,8 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         // validation list of available social networks
         $valid_networks = array('twitter', 'facebook', 'googleplus',
                                 'linkedin', 'pinterest', 'tumblr',
-                                'reddit', 'taringa', 'delicious',
-                                'stumbleupon', 'xing', 'vk', 'email');
+                                'reddit', 'taringa', 'stumbleupon',
+                                'xing', 'vk', 'email');
 
         if (in_array($data['display'], $valid_displays)) {
             $display = $data['display'];
@@ -152,11 +152,6 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
             case 'taringa':
                 $name = 'Taringa';
                 $href = 'http://www.taringa.net/widgets/share.php?url='. $url .'&body=' . $title;
-                break;
-            case 'delicious':
-                $name = 'Delicious';
-                $href = 'https://delicious.com/save?v=5&noui&jump=close&url='. $url .'&title=' . $title;
-                if ($this->getConf('delicious_provider')) { $href .= "&provider=" . rawurlencode($this->getConf('delicious_provider')); }
                 break;
             case 'stumbleupon':
                 $name = 'StumbleUpon';

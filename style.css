@@ -183,23 +183,6 @@
     background-color: #005dab;
 }
 
-/* Delicious */
-
-.socialite li.name .delicious,
-.socialite li.icon .delicious,
-.socialite li.color .delicious {
-    border-color: #3399FF;
-}
-
-.socialite li.name .delicious,
-.socialite li.icon .delicious {
-    background-image: url("images/delicious.svg");
-}
-
-.socialite li.color .delicious {
-    background-color: #3399FF;
-}
-
 /* StumbleUpon */
 
 .socialite li.name .stumbleupon,
