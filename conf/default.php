@@ -12,4 +12,6 @@ $conf['networks']           = 'twitter facebook googleplus linkedin pinterest tu
 
 $conf['display']            = 'color';
 
+$conf['target']             = '_blank';
+
 $conf['twitter_user']       = '';

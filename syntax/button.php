@@ -119,6 +119,8 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         $title    = rawurlencode(($INFO['meta']['title']) ? $INFO['meta']['title'] : $meta);
         $abstract = rawurlencode($INFO['meta']['description']['abstract']);
 
+        $target = $this->getConf('target') ;
+
         switch ($network) {
             case 'twitter':
                 $name = 'Twitter';
@@ -172,7 +174,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         }
 
         $xhtml  = '<li class="' . $display . '">';
-        $xhtml .= '<a class="' . $network . '" href="' . $href . '">' . $name . '</a>';
+        $xhtml .= '<a class="' . $network . '" target="' . $target . '" href="' . $href . '">' . $name . '</a>';
         $xhtml .= '</li>';
 
         return $xhtml;
