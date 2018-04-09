@@ -200,6 +200,23 @@
     background-color: #eb4924;
 }
 
+/* Telegram */
+
+.socialite li.name .telegram,
+.socialite li.icon .telegram,
+.socialite li.color .telegram {
+    border-color: #1d94d3;
+}
+
+.socialite li.name .telegram,
+.socialite li.icon .telegram {
+    background-image: url("images/telegram.svg");
+}
+
+.socialite li.color .telegram {
+    background-color: #1d94d3;
+}
+
 /* Xing */
 
 .socialite li.name .xing,

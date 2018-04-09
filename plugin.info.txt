@@ -1,7 +1,7 @@
 base   socialite
 author Fernando Ribeiro
-email  pinguim.ribeiro@gmail.com
-date   2017-12-07
+email  fribeiro@fribeiro.org
+date   2018-04-09
 name   Socialite plugin
 desc   Lightweight responsive social buttons
 url    https://www.dokuwiki.org/plugin:socialite
