@@ -217,6 +217,23 @@
     background-color: #1d94d3;
 }
 
+/* Hacker News */
+
+.socialite li.name .hackernews,
+.socialite li.icon .hackernews,
+.socialite li.color .hackernews {
+    border-color: #ff6600;
+}
+
+.socialite li.name .hackernews,
+.socialite li.icon .hackernews {
+    background-image: url("images/hackernews.svg");
+}
+
+.socialite li.color .hackernews {
+    background-color: #ff6600;
+}
+
 /* Xing */
 
 .socialite li.name .xing,

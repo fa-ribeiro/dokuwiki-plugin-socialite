@@ -85,7 +85,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         $valid_networks = array('twitter', 'facebook', 'googleplus',
                                 'linkedin', 'pinterest', 'tumblr',
                                 'reddit', 'taringa', 'stumbleupon',
-                                'telegram', 'xing', 'vk', 'email');
+                                'telegram', 'hackernews', 'xing', 'vk', 'email');
 
         if (in_array($data['display'], $valid_displays)) {
             $display = $data['display'];
@@ -162,6 +162,10 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
             case 'telegram':
                 $name = 'Telegram';
                 $href = 'https://telegram.me/share/url?url='. $url .'&text=' . $title;
+                break;
+            case 'hackernews':
+                $name = 'Hacker News';
+                $href = 'https://news.ycombinator.com/submitlink?u='. $url .'&t=' . $title;
                 break;
             case 'xing':
                 $name = 'Xing';
