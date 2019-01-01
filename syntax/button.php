@@ -115,7 +115,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         global $ID;
         global $INFO;
 
-        $url      = rawurlencode(wl($INFO['id'], '', true)$INFO['id']);
+        $url      = rawurlencode(wl($INFO['id'], '', true));
         $title    = rawurlencode(($INFO['meta']['title']) ? $INFO['meta']['title'] : $meta);
         $abstract = rawurlencode($INFO['meta']['description']['abstract']);
 
