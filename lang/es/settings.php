@@ -2,7 +2,7 @@
 /**
  * Spanish language file for socialite plugin
  *
- * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
+ * @author Fernando Ribeiro <fribeiro@fribeiro.org>
  */
 
 $lang['networks']           = 'Lista de tus butones sociales favoritos, separados por espacio y en orden de aparición. Son nombre válidos: twitter facebook googleplus linkedin pinterest tumblr reddit taringa stumbleupon telegram hackernews xing vk email';

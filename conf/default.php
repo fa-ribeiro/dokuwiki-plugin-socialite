@@ -2,7 +2,7 @@
 /**
  * Default settings for the socialite plugin
  *
- * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
+ * @author Fernando Ribeiro <fribeiro@fribeiro.org>
  */
 
 //$conf['fixme']    = 'FIXME';

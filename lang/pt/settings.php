@@ -2,7 +2,7 @@
 /**
  * Portuguese language file for socialite plugin
  *
- * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
+ * @author Fernando Ribeiro <fribeiro@fribeiro.org>
  */
 
 $lang['networks']           = 'A lista dos teus botões sociais favoritos, ordenados e separados por espaços. Os nomes válidos são: twitter facebook googleplus linkedin pinterest tumblr reddit taringa stumbleupon telegram hackernews xing vk email';

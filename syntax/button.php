@@ -3,7 +3,7 @@
  * DokuWiki Plugin socialite (Syntax Component)
  *
  * @license GPL 2 http://www.gnu.org/licenses/gpl-2.0.html
- * @author  Fernando Ribeiro <pinguim.ribeiro@gmail.com>
+ * @author  Fernando Ribeiro <fribeiro@fribeiro.org>
  */
 
 // must be run within Dokuwiki

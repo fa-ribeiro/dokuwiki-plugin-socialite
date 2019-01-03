@@ -2,7 +2,7 @@
 /**
  * Spanish language file for socialite plugin
  *
- * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
+ * @author Fernando Ribeiro <fribeiro@fribeiro.org>
  */
 
 // menu entry for admin plugins
