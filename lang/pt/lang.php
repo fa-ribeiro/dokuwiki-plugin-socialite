@@ -1,6 +1,6 @@
 <?php
 /**
- * Portuguese language file for lsb plugin
+ * Portuguese language file for socialite plugin
  *
  * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
  */
