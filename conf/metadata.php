@@ -1,6 +1,6 @@
 <?php
 /**
- * Options for the lsb plugin
+ * Options for the socialite plugin
  *
  * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
  */

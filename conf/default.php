@@ -1,6 +1,6 @@
 <?php
 /**
- * Default settings for the lsb plugin
+ * Default settings for the socialite plugin
  *
  * @author Fernando Ribeiro <pinguim.ribeiro@gmail.com>
  */

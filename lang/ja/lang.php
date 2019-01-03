@@ -1,6 +1,6 @@
 <?php
 /**
- * Japanese language file for lsb plugin
+ * Japanese language file for socialite plugin
  *
  * @author Makito Katsube <katsubemakito@gmail.com>
  */
